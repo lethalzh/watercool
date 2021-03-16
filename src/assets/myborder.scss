@@ -1,0 +1,169 @@
+//  https://blog.csdn.net/SunKKkKK/article/details/89763233?utm_medium=distribute.pc_relevant.none-task-blog-OPENSEARCH-5.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-OPENSEARCH-5.control
+
+@keyframes animated-border {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255,255,255,0.1);
+    }
+    100% {
+        box-shadow: 0 0 0 3px aquamarine;
+    }
+}
+.box4 {
+    animation: animated-border 2.5s infinite;
+    line-height: 30px;
+    font-weight: bold;
+    border: 2px solid #cee3e9;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.box {
+    padding: 15px 15px 0 15px;
+    border:1px solid #eee;
+    border-radius:30px;
+    background-color: rgba(153,50,204,0.1);
+    position:relative;
+    margin-top:20px;
+}
+.box1 {
+    padding: 0 15px 0 15px;
+    border:1px solid #eee;
+    margin-top:50px;
+    background-color:rgb(100,112,106);
+}
+.box2 {
+    padding: 0 15px 0 15px;
+    border:1px solid #eee;
+    margin-top:50px;
+    background-color:rgb(208,215,233);
+}
+.left-to-right-border {
+    position:absolute;
+    width:0;
+    height:1px;
+    background-color:#E8F5FE;
+    top:0;
+    left:0;
+    bottom:0;
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    -webkit-box-shadow:0px -3px 5px #FFDD99;
+    box-shadow:0px -3px 5px #FFDD99;
+}
+.right-to-bottom-border {
+    position:absolute;
+    width:1px;
+    height:0px;
+    background-color:#E8F5FE;
+    top:0;
+    right:0;
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    -webkit-box-shadow:3px 0px 5px#FFDD99;
+    box-shadow:3px 0px 5px #FFDD99;
+}
+.bottom-to-left-border {
+    position:absolute;
+    width:0px;
+    height:1px;
+    background-color:#E8F5FE;
+    bottom:0;
+    right:0;
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    -webkit-box-shadow:0px 3px 5px #FFDD99;
+    box-shadow:0px 3px 5px #FFDD99;
+}
+.bottom-to-start-border {
+    position:absolute;
+    width:1px;
+    height:0px;
+    background-color:#E8F5FE;
+    bottom:0;
+    left:0;
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    -webkit-box-shadow:-3px 0px 5px #FFDD99;
+    box-shadow:-3px 0px 5px #FFDD99;
+}
+.box:hover .left-to-right-border {
+    width:100%;
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+}
+.box:hover .right-to-bottom-border {
+    height:100%;
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+}
+.box:hover .bottom-to-left-border {
+    width:100%;
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+}
+.box:hover .bottom-to-start-border {
+    height:100%;
+    transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+}
+/* 强大的分割线 */
+.box2:hover .left-to-right-border {
+    width:100%;
+    -webkit-transition-duration:0.2s;
+    transition-duration:0.2s;
+    -webkit-transition-timing-function:linear;
+    transition-timing-function:linear;
+    -webkit-transition-delay:0s;
+    transition-delay:0s;
+}
+.box2:hover .right-to-bottom-border {
+    height:100%;
+    -webkit-transition-duration:0.2s;
+    transition-duration:0.2s;
+    -webkit-transition-timing-function:linear;
+    transition-timing-function:linear;
+    -webkit-transition-delay:0.2s;
+    transition-delay:0.2s;
+}
+.box2:hover .bottom-to-left-border {
+    width:100%;
+    -webkit-transition-duration:0.2s;
+    transition-duration:0.2s;
+    -webkit-transition-timing-function:linear;
+    transition-timing-function:linear;
+    -webkit-transition-delay:0.4s;
+    transition-delay:0.4s;
+}
+.box2:hover .bottom-to-start-border {
+    height:100%;
+    -webkit-transition-duration:0.2s;
+    transition-duration:0.2s;
+    -webkit-transition-timing-function:linear;
+    transition-timing-function:linear;
+    -webkit-transition-delay:0.6s;
+    transition-delay:0.6s;
+}

@@ -1,0 +1,338 @@
+rollLineLength:400,     轧线长度
+calculateSteel:1,       钢  种
+steelGrade:1,           钢种牌号
+moldShape:1,            铸坯形状
+castBlankSize:[160,160],铸胚尺寸
+crossSectionCast:25600, 铸坯截面
+castTemperature:1000,   铸坯温度
+castBlankLength:12.0,   铸坯长度
+ambientTemperature:40,  环境温度
+entranceVelocity:0.20,  入口速度
+
+计算收敛精度                    precision:0.0001,
+径向网格数量                    xnum:50,
+轴向网格数量                    ynum:50,
+水箱计算步长                    waterStride:400,
+轧制计算步长                    rollingStride:10,
+空冷计算步长                    airStride:50
+
+
+除磷箱长度                    length:300,
+喷嘴组数                    nozzleNumber:1,
+水压                    waterPressure:20,
+水量                    waterVolume:40,
+换热模型/换热系数 标记        radio:1,
+换热模型                    hModel:1,
+换热系数                    hCoefficient:3500,
+
+
+['粗轧机组','中轧机组','精轧机组','减定径机组']
+'RoughRoll','MediumRoll','FinishRoll','ReducedRoll'
+
+轧机数组                 domains: [{
+    相对位置                       relativem:0,
+    绝对位置                        absolutem:0,
+    轧辊直径                        RollerDiameter:610,
+    延伸系数                       ExtensionFactor:120,
+    形变系数                        DeformationCoefficient:200,
+    抗拉强度                       TensileStrength:200
+                    }],
+产线布置                 resource:1,
+轧机总长度               length:23,
+
+
+飞剪数组           shear: [{
+剪头长度                    cutHeadLength: 10,
+剪尾长度                    tailLength: 10,
+成品直径                    finishDiameter: 5},
+                         ],
+飞剪长度数组                   length:[8,7,6]
+
+
+
+水箱数组                     watBox:[{
+绝对位置                        absolutem:0,
+水箱长度                        waterTankLength:null,
+冷却水温                        coolWaterTemperature:null,
+冷却水量                        coolWater:null,
+冷却水压                        coolingWaterPressure:null,
+    喷嘴数组                       nozzDatas:[{
+        喷嘴直径                            nozzleDiameter:30,
+        环缝宽度                           ringWidth:1.5,
+        喷嘴角度                        nozzleAngle:30,
+        喷嘴状态                      nozzleStatus:true}]
+                        }],
+类型                          type:1,
+换热模型                    heatModel:1,
+换热模型-修正参数                    heatFixParameter:1,
+水箱总长度                    length:20,
+
+
+吐丝机倾角            layAngle:20,
+风机数量                    fansNum:14,
+风冷线长度                    ength:0,
+                    airStar:{
+首段冷却段长度                        length:5,
+冷却段换热模型/换热系数                        heatModel:500,
+冷却段轧辊速度                        rollSpeed:0.3
+                    },
+                    airMid:{
+中段冷却段长度                        NLength:9,
+中段冷却段段数                        Num:9,
+     风机数组                   fans:[
+        当前段号                    fanNum:j,
+        辊道速度                    rollerSpeed:0.3,
+        冷却方式                    coolMethod:1,
+        风机风量                    fanAir:21,
+        风机开口度                    fanOpenDegree:100,
+        风机角度                    fanAngle:90,
+        换热系数/模型                  heatModel:500,
+        风机状态                  statu:true,
+                        ],
+                    },
+                    airEnd:{
+尾段冷却段长度                        length:5,
+冷却段换热模型/换热系数                        heatModel:500,
+冷却段轧辊速度                          rollSpeed:0.3
+                    }
+
+风机数量 fanNum
+辊道速度 rollerSpeed
+冷却方式 coolMethod
+风机风量 fanAir
+风机开口度 fanOpenDegree
+风机角度 fanAngle
+换热模型 heatModel
+开关状态 statu
+
+               飞剪
+'otherData' , 'shearFlyForm'
+, 'RoughRoll','MediumRoll','FinishRoll','ReducedRoll'
+['RoughRoll','MediumRoll','PreFinishRoll','FinishRoll','ReducedRoll'
+['粗轧机组','中轧机组','预精轧','精轧机组','减定径机组']
+ ,'PrefinishWaterTank', 'FrontWaterFinish', 'RearWaterTankFinish', 'ReducedRearWaterTank'
+
+ ['预精轧间水箱','精轧机前水箱','精轧机后水箱','减定径后水箱']
+
+
+
+
+
+
+
+fade: {
+        title: '淡入淡出',
+        fadeIn: '淡入',
+        fadeInDown: '向下淡入',
+        fadeInDownBig: '向下快速淡入',
+        fadeInLeft: '向右淡入',
+        fadeInLeftBig: '向右快速淡入',
+        fadeInRight: '向左淡入',
+        fadeInRightBig: '向左快速淡入',
+        fadeInUp: '向上淡入',
+        fadeInUpBig: '向上快速淡入',
+        fadeOut: '淡出',
+        fadeOutDown: '向下淡出',
+        fadeOutDownBig: '向下快速淡出',
+        fadeOutLeft: '向左淡出',
+        fadeOutLeftBig: '向左快速淡出',
+        adeOutRight: '向右淡出',
+        fadeOutRightBig: '向右快速淡出',
+        fadeOutUp: '向上淡出',
+        fadeOutUpBig: '向上快速淡出'
+      },
+      bounce: {
+        title: '弹跳类',
+        bounceIn: '弹跳进入',
+        bounceInDown: '向下弹跳进入',
+        bounceInLeft: '向右弹跳进入',
+        bounceInRight: '向左弹跳进入',
+        bounceInUp: '向上弹跳进入',
+        bounceOut: '弹跳退出',
+        bounceOutDown: '向下弹跳退出',
+        bounceOutLeft: '向左弹跳退出',
+        bounceOutRight: '向右弹跳退出',
+        bounceOutUp: '向上弹跳退出'
+      },
+      zoom: {
+        title: '缩放类',
+        zoomIn: '放大进入',
+        zoomInDown: '向下放大进入',
+        zoomInLeft: '向右放大进入',
+        zoomInRight: '向左放大进入',
+        zoomInUp: '向上放大进入',
+        zoomOut: '缩小退出',
+        zoomOutDown: '向下缩小退出',
+        zoomOutLeft: '向左缩小退出',
+        zoomOutRight: '向右缩小退出',
+        zoomOutUp: '向上缩小退出'
+      },
+      rotate: {
+        title: '旋转类',
+        rotateIn: '顺时针旋转进入',
+        rotateInDownLeft: '从左往下旋入',
+        rotateInDownRight: '从右往下旋入',
+        rotateInUpLeft: '从左往上旋入',
+        rotateInUpRight: '从右往上旋入',
+        rotateOut: '顺时针旋转退出',
+        rotateOutDownLeft: '向左下旋出',
+        rotateOutDownRight: '向右下旋出',
+        rotateOutUpLeft: '向左上旋出',
+        rotateOutUpRight: '向右上旋出'
+      },
+      flip: {
+        title: '翻转类',
+        flipInX: '水平翻转进入',
+        flipInY: '垂直翻转进入',
+        flipOutX: '水平翻转退出',
+        flipOutY: '垂直翻转退出'
+      },
+      strong: {
+        title: '强调类',
+        bounce: '弹跳',
+        flash: '闪烁',
+        pulse: '脉冲',
+        rubberBand: '橡皮筋',
+        shake: '左右弱晃动',
+        swing: '上下摆动',
+        tada: '缩放摆动',
+        wobble: '左右强晃动',
+        jello: '拉伸抖动'
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <div class="imgs">
+                  <transition name="test">
+                      <el-tooltip v-if="active>0&&showCast" class="item" effect="dark" content="连铸" placement="top">
+                          <img :src="lianzhu" height="53" width="69"/>
+                      </el-tooltip>
+                      <div v-else-if="!showCast" class="hr"></div>
+                  </transition>
+                  <transition name="test">
+                      <el-tooltip v-if="active>0&&showHeat" class="item" effect="dark" :content="'除鳞箱长度：'+LengthArr[0]" placement="top">
+                      <img :src="jrl" height="50" width="70"/>
+                  </el-tooltip>
+                  </transition>
+
+                  <transition
+                          enter-active-class="animate__animated animate__bounceInLeft"
+                          leave-active-class="animate__animated animate__bounceOutLeft">
+                      <el-tooltip  v-if="active>1" class="item " effect="dark"  :content="'粗轧机组：'+LengthArr[1]" placement="top">
+                          <img :src="zhaji1" height="90" width="230"/>
+                      </el-tooltip>
+                  </transition>
+                  <transition
+                          enter-active-class="animate__animated animate__fadeInDown"
+                          leave-active-class="animate__animated animate__fadeOutDown">
+                      <el-tooltip v-if="active>2" class="item" effect="dark" content="飞剪#1" placement="top">
+                          <img :src="fj" height="52" width="48"/>
+                      </el-tooltip>
+                  </transition>
+
+                  <transition
+                          enter-active-class="animate__animated animate__bounceInLeft"
+                          leave-active-class="animate__animated animate__bounceOutLeft">
+                      <el-tooltip v-if="active>3" class="item" effect="dark" content="中轧机组" placement="top">
+                          <img :src="zhaji1"height="90" width="230"/>
+                      </el-tooltip>
+                  </transition>
+                  <transition
+                          enter-active-class="animate__animated animate__fadeInDown"
+                          leave-active-class="animate__animated animate__fadeOutDown">
+                      <el-tooltip v-if="active>2&&active>3" class="item" effect="dark" content="飞剪2" placement="top">
+                          <img :src="fj"  height="52" width="48"/>
+                      </el-tooltip>
+                  </transition>
+
+                  <transition
+                          enter-active-class="animate__animated animate__zoomInLeft"
+                          leave-active-class="animate__animated animate__zoomOutRight"
+                  >
+                      <el-tooltip v-if="active>4" class="item" effect="dark" content="'预精轧前水箱'" placement="top">
+                          <img :src="sx" height="35" width="120"/>
+                      </el-tooltip>
+                  </transition>
+                  <transition
+                          enter-active-class="animate__animated animate__bounceInUp"
+                          leave-active-class="animate__animated animate__bounceOutDown">
+                      <el-tooltip v-if="active>5" class="item" effect="dark" content="预精轧机组" placement="top">
+                          <img :src="zhaji1" height="90" width="230"/>
+                      </el-tooltip>
+                  </transition>
+
+
+                  <transition
+                          enter-active-class="animate__animated animate__zoomInLeft"
+                          leave-active-class="animate__animated animate__zoomOutRight"
+                  >
+                      <el-tooltip v-if="active>6" class="item" effect="dark" content="精轧前水箱" placement="top">
+                          <img :src="sx" height="35" width="120"/>
+                      </el-tooltip>
+                  </transition>
+                  <transition
+                          enter-active-class="animate__animated animate__fadeInDown"
+                          leave-active-class="animate__animated animate__fadeOutDown">
+                      <el-tooltip v-if="active>2&&active>6" class="item" effect="dark" content="飞3" placement="top">
+                          <img :src="fj" height="52" width="48"/>
+                      </el-tooltip>
+                  </transition>
+                  <transition
+                          enter-active-class="animate__animated animate__bounceInRight"
+                          leave-active-class="animate__animated animate__bounceOutRight">
+                      <el-tooltip v-if="active>7" class="item" effect="dark" content="精轧机组" placement="top">
+                          <img :src="zhaji2" height="80" width="230"/>
+                      </el-tooltip>
+                  </transition>
+
+
+                  <transition
+                          enter-active-class="animate__animated animate__zoomInLeft"
+                          leave-active-class="animate__animated animate__zoomOutRight"
+                  >
+                      <el-tooltip v-if="active>8" class="item" effect="dark" content="精轧后水箱" placement="top">
+                          <img :src="sx" height="35" width="120"/>
+                      </el-tooltip>
+                  </transition>
+
+                  <transition
+                          enter-active-class="animate__animated animate__bounceInRight"
+                          leave-active-class="animate__animated animate__bounceOutRight">
+                      <el-tooltip v-if="active>9" class="item" effect="dark" content="减定径机组" placement="top">
+                          <img :src="zhaji3"   height="75" width="75"/>
+                      </el-tooltip>
+                  </transition>
+                  <transition
+                          enter-active-class="animate__animated animate__zoomInLeft"
+                          leave-active-class="animate__animated animate__zoomOutRight">
+                      <el-tooltip v-if="active>10" class="item" effect="dark" content="减定径后水箱" placement="top">
+                          <img :src="sx" height="35" width="120"/>
+                      </el-tooltip>
+                  </transition>
+
+                  <transition
+                          enter-active-class="animate__animated animate__rotateIn"
+                          leave-active-class="animate__animated animate__rotateOut">
+                      <el-tooltip v-if="active>11" class="item" effect="dark" content="吐丝机" placement="top">
+                          <img :src="tsj"  height="75" width="75"/>
+                      </el-tooltip>
+                  </transition>
+
+
+
+              </div>
+
+
+
+

@@ -1,28 +1,35 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+
+import WaterCoolHome from '@/views/WaterCoolHome.vue'
+import QueuePage from  '@/views/QueuePage.vue'
+import Curve from '@/components/forms/TemperatureCurve.vue'
+import Index from "@/views/Index.vue"
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/database_table',
+    name: 'QueuePagename',
+    component: QueuePage
+  },
+
+
+  {
+    path: '/water_cool_sheet',
+    name:'Curvename',
+    component:Curve
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/cooling_calculation_vue',
+    component: WaterCoolHome,
   }
 ]
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: "/",
   routes
 })
 

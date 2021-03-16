@@ -1,0 +1,64 @@
+.fixedBox {
+  .fixedicon {
+    position: fixed;
+    background-color: #A9C9E2;
+    bottom: 380px;
+    right: 40px;
+    display: block;
+    font-size: 40px;
+    color: #f1f7f9;
+  }
+
+  .abtn {
+    width: 125px;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #FFF;
+    border: 1px solid #DCDFE6;
+    color: #606266;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+    transition: .1s;
+    font-weight: 500;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: #FFF;
+    background-color: #409EFF;
+    border-color: #409EFF;
+
+    &:focus, &:hover {
+      background: #66b1ff;
+      border-color: #66b1ff;
+      color: #FFF;
+    }
+  }
+
+  .fixedbtm {
+    position: fixed;
+    bottom: 300px;
+    right: 45px;
+    display: none;
+  }
+
+  .fixedbtm1 {
+    position: fixed;
+    bottom: 335px;
+    right: 45px;
+    display: none;
+  }
+
+
+  .fixedbtm2 {
+    position: fixed;
+    bottom: 270px;
+    right: 45px;
+    display: none;
+  }
+}
